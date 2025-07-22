@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import Weather from './Weather';
 import NewsApp from './NewsApp';
+import { useLocation } from 'react-router-dom';
 
 const Project = () => {
+  const location = useLocation();
   // Can be 'weather' or 'news'. Defaults to showing the News App.
-  const [activeApp, setActiveApp] = useState('news');
+  const [activeApp, setActiveApp] = useState(location.state?.defaultApp || 'news');
 
   const getButtonClasses = (appName) => {
     const baseClasses = "py-2 px-6 text-lg font-medium focus:outline-none transition-colors duration-300";
