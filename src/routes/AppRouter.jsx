@@ -4,7 +4,7 @@ import NavBar from '../Components/NavBar'
 import About from '../pages/About'
 import Contact from '../pages/Contact'
 import Projects from '../pages/Projects'
-import Login from '../pages/Login'
+import Blog from '../pages/Blog'
 import Footer from '../Components/Footer'
 import Home from '../pages/Home'
 import UserList from '../pages/Userlist'
@@ -17,10 +17,10 @@ const AppRouter = () => {
     <NavBar/>
    <Routes>
     <Route path="/" element={<Home />} />
-    <Route path="/aboutme" element={<About/>}/>
+    <Route path="/about" element={<About/>}/>
     <Route path="/contact" element={<Contact/>}/>
     <Route path="/projects" element={<Projects/>}/>
-    <Route path='/login' element={<Login/>}/>
+    <Route path='/blog' element={<Blog/>}/>
     <Route path="/user" element={<Navigate to="/users" replace />} />
     <Route path="/users">
       <Route index element={<UserList />} />
