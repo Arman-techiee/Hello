@@ -12,6 +12,8 @@ dist
 dist-ssr
 *.local
 .env
+# Ignore the photo directory inside the assets folder
+/src/assets/photo
 
 # Editor directories and files
 .vscode/*
