@@ -33,9 +33,9 @@ function NavBar() {
             className="flex items-center space-x-2 text-xl font-bold text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
           >
             <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">P</span>
+              <span className="text-white font-bold text-sm">A</span>
             </div>
-            <span className="hidden sm:block">Portfolio</span>
+            <span className="hidden sm:block">Arman</span>
           </Link>
 
           {/* Desktop Navigation */}
