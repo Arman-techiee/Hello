@@ -1,7 +1,7 @@
 import React from "react";
-import { Mail, Phone } from "lucide-react";
+import { Facebook, Instagram, Mail, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
-import profilePic from "../assets/profile.png"; // Make sure to add your photo at this path
+import profilePic from "/src/assets/photo/profile.png";
 
 const Home = () => {
   const projects = [
@@ -99,7 +99,7 @@ const Home = () => {
           <p className="text-lg text-gray-700 dark:text-gray-300 mb-6">
             I'm currently open to new opportunities. Feel free to reach out!
           </p>
-          <div className="flex items-center justify-center gap-8 text-gray-700 dark:text-gray-300">
+          <div className="flex flex-wrap items-center justify-center gap-8 text-gray-700 dark:text-gray-300">
             <a
               href="mailto:arman.techiee@gmail.com"
               className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
@@ -113,6 +113,24 @@ const Home = () => {
             >
               <Phone />
               <span>+977-9826999632</span>
+            </a>
+            <a
+              href="https://www.facebook.com/techiee.arman"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
+            >
+              <Facebook />
+              <span>Facebook</span>
+            </a>
+            <a
+              href="https://www.instagram.com/techiee.arman"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
+            >
+              <Instagram />
+              <span>Instagram</span>
             </a>
           </div>
         </section>

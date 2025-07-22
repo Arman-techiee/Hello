@@ -19,6 +19,22 @@ const Footer = () => (
         GitHub
       </a>
       <a
+        href="https://www.facebook.com/techiee.arman"
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{ color: "#fff", margin: "0 1rem", textDecoration: "none" }}
+      >
+        Facebook
+      </a>
+      <a
+        href="https://www.instagram.com/techiee.arman"
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{ color: "#fff", margin: "0 1rem", textDecoration: "none" }}
+      >
+        Instagram
+      </a>
+      <a
         href="mailto:arman.techiee@gmail.com"
         style={{ color: "#fff", margin: "0 1rem", textDecoration: "none" }}
       >

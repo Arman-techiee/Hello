@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Facebook, Instagram } from "lucide-react";
 
 const Contact = () => {
   const [name, setName] = useState("");
@@ -25,6 +26,26 @@ const Contact = () => {
           <p className="text-center text-gray-700 dark:text-gray-300 mb-6">
             Have a question or want to work together? Fill out the form below.
           </p>
+          <div className="flex items-center justify-center gap-6 mb-8">
+            <a
+              href="https://www.facebook.com/techiee.arman"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-500 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-500 transition-colors"
+              aria-label="Facebook Profile"
+            >
+              <Facebook className="w-6 h-6" />
+            </a>
+            <a
+              href="https://www.instagram.com/techiee.arman"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-500 hover:text-pink-500 dark:text-gray-400 dark:hover:text-pink-400 transition-colors"
+              aria-label="Instagram Profile"
+            >
+              <Instagram className="w-6 h-6" />
+            </a>
+          </div>
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
               <label
