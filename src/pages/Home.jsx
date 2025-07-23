@@ -16,27 +16,35 @@ import profilePic from "/src/assets/photo/profile.png";
 
 const Home = () => {
   const skills = [
-    { icon: Code, name: "Development", description: "Modern web technologies" },
-    { icon: Palette, name: "Design", description: "User-centered interfaces" },
-    { icon: Globe, name: "Integration", description: "Seamless API solutions" }
+    { icon: Code, name: "Coding", description: "Web development & programming languages" },
+    { icon: Palette, name: "Research", description: "Academic research & technology exploration" },
+    { icon: Globe, name: "Networking", description: "System administration & network protocols" }
   ];
 
   const featuredProjects = [
     {
       title: "Weather Intelligence App",
       description:
-        "Advanced weather application featuring real-time data, forecasting, and intuitive UI. Built with React and integrated with WeatherAPI for accurate meteorological information.",
+        "Academic project showcasing API integration and real-time data processing. Built with React to demonstrate understanding of modern web technologies and external service integration.",
       tech: ["React", "API Integration", "Responsive Design"],
       link: "/projects",
       linkState: { defaultApp: "weather" },
     },
     {
-      title: "Nepal News Platform",
+      title: "Interactive Typing Test",
       description:
-        "Comprehensive news aggregation platform delivering the latest headlines from Nepal. Features dynamic content loading and optimized performance for seamless user experience.",
-      tech: ["React", "NewsAPI", "Performance Optimization"],
+        "Educational tool developed to enhance programming productivity and measure typing proficiency. Features real-time analytics and performance tracking for coding practice.",
+      tech: ["React", "Real-time Analytics", "Interactive UI"],
       link: "/projects",
-      linkState: { defaultApp: "news" },
+      linkState: { defaultApp: "typing" },
+    },
+    {
+      title: "Movie Rating App",
+      description:
+        "Full-featured movie discovery platform with rating system, watchlist, and favorites management. Demonstrates advanced React patterns, state management, and user interface design principles.",
+      tech: ["React", "State Management", "Interactive Components"],
+      link: "/projects",
+      linkState: { defaultApp: "movies" },
     },
   ];
 
@@ -52,12 +60,12 @@ const Home = () => {
                 <h1 className="text-5xl lg:text-6xl font-bold tracking-tight">
                   <span className="block">Arman Khan</span>
                   <span className="block text-3xl lg:text-4xl text-blue-300 font-normal mt-2">
-                    Full Stack Developer
+                    BIT Student & Aspiring Developer
                   </span>
                 </h1>
                 <p className="text-xl text-gray-200 leading-relaxed max-w-lg">
-                  Crafting exceptional digital experiences through innovative web solutions. 
-                  Passionate about clean code, modern design, and user-centric development.
+                  Currently pursuing Bachelor in Information Technology at Texas College of Management and IT. 
+                  Passionate about coding, research, networking, and building innovative digital solutions.
                 </p>
               </div>
               
@@ -96,9 +104,9 @@ const Home = () => {
         {/* Skills Section */}
         <section className="py-20">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">What I Do</h2>
+            <h2 className="text-4xl font-bold mb-4">My Areas of Interest</h2>
             <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-              Combining technical expertise with creative vision to deliver comprehensive digital solutions
+              Exploring technology through academic study and practical application
             </p>
           </div>
           
@@ -123,15 +131,16 @@ const Home = () => {
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold mb-8">About Me</h2>
             <p className="text-xl text-gray-700 dark:text-gray-300 leading-relaxed mb-8 max-w-3xl mx-auto">
-              I'm a passionate full-stack developer with a keen eye for design and a commitment to excellence. 
-              With expertise in modern web technologies, I transform complex ideas into elegant, scalable solutions 
-              that make a real impact.
+              I'm currently pursuing my Bachelor's in Information Technology at Texas College of Management and IT. 
+              As a dedicated BIT student, I'm passionate about exploring the intersection of technology and innovation. 
+              My academic journey focuses on coding, research methodologies, and networking technologies, while I actively 
+              work on practical projects to bridge theory with real-world applications.
             </p>
             <Link
               to="/about"
               className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 font-semibold text-lg transition-colors"
             >
-              Learn More About My Journey
+              Learn More About My Academic Journey
               <ArrowRight className="ml-2 w-5 h-5" />
             </Link>
           </div>
@@ -140,13 +149,13 @@ const Home = () => {
         {/* Featured Projects Section */}
         <section id="projects" className="py-20">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Featured Work</h2>
+            <h2 className="text-4xl font-bold mb-4">Academic Projects</h2>
             <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-              A showcase of my recent projects demonstrating technical skills and creative problem-solving
+              A showcase of my academic and personal projects demonstrating programming skills and technical learning
             </p>
           </div>
           
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
             {featuredProjects.map((project, index) => (
               <div
                 key={project.title}
@@ -202,10 +211,10 @@ const Home = () => {
         {/* Contact Section */}
         <section className="py-20 bg-gradient-to-r from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-700 -mx-4 sm:-mx-6 lg:-mx-8 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl font-bold mb-8">Let's Work Together</h2>
+            <h2 className="text-4xl font-bold mb-8">Let's Connect</h2>
             <p className="text-xl text-gray-700 dark:text-gray-300 mb-12 max-w-2xl mx-auto">
-              I'm currently available for new opportunities and exciting projects. 
-              Let's discuss how we can bring your ideas to life.
+              I'm always eager to connect with fellow students, researchers, and technology enthusiasts. 
+              Let's discuss academic collaborations, project ideas, or networking opportunities.
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto">

@@ -35,7 +35,7 @@ function NavBar() {
             <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-sm">A</span>
             </div>
-            <span className="hidden sm:block">Arman</span>
+            <span className="hidden sm:block">Portfolio</span>
           </Link>
 
           {/* Desktop Navigation */}
