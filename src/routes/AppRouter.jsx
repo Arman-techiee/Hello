@@ -9,6 +9,7 @@ import Footer from '../Components/Footer'
 import Home from '../pages/Home'
 import UserList from '../pages/UserList'
 import UserDetail from '../pages/UserDetail'
+import ProtectedRoute from '../Components/ProtectedRoute'
 
 
 const AppRouter = () => {
@@ -19,7 +20,14 @@ const AppRouter = () => {
     <Route path="/" element={<Home />} />
     <Route path="/about" element={<About/>}/>
     <Route path="/contact" element={<Contact/>}/>
-    <Route path="/projects" element={<Projects/>}/>
+    <Route
+      path="/projects"
+      element={
+        <ProtectedRoute>
+          <Projects />
+        </ProtectedRoute>
+      }
+    />
     <Route path='/blog' element={<Blog/>}/>
     <Route path="/user" element={<Navigate to="/users" replace />} />
     <Route path="/users" element={<Outlet />}>

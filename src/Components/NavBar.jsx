@@ -2,6 +2,8 @@ import { Link, NavLink } from "react-router-dom";
 import { useTheme } from "../hooks/useTheme";
 import { Moon, Sun, Menu, X } from "lucide-react";
 import { useState } from "react";
+import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/clerk-react";
+import { Button } from "./ui/button";
 
 const navLinks = [
   { to: "/", label: "Home" },
@@ -24,7 +26,7 @@ function NavBar() {
   };
 
   return (
-    <nav className="bg-white text-gray-900 dark:text-gray-100 shadow-lg border-b border-gray-200 dark:border-gray-700 sticky top-0 z-50 backdrop-blur-sm dark:bg-gray-900/95">
+    <nav className="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 shadow-lg border-b border-gray-200 dark:border-gray-700 sticky top-0 z-50 backdrop-blur-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
@@ -71,6 +73,17 @@ function NavBar() {
                 <Sun className="w-4 h-4 text-yellow-500" />
               )}
             </button>
+
+            {/* Auth Buttons */}
+            <SignedOut>
+              <Button className="font-bold">
+                <SignInButton mode="modal" />
+              </Button>
+            </SignedOut>
+
+            <SignedIn>
+              <UserButton afterSignOutUrl="/" />
+            </SignedIn>
 
             {/* Mobile Menu Button */}
             <button
