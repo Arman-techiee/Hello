@@ -1,1 +1,1 @@
-Portfolio of Mine. Made using React.js
+This is the portfolio of mine.
