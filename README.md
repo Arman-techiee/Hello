@@ -30,8 +30,8 @@ Before you begin, ensure you have the following installed:
 
 1. Clone the repository
 ```bash
-git clone https://github.com/yourusername/techieearman.git
-cd techieearman
+git clone https://github.com/Arman-techiee/hello.git
+cd hello
 ```
 
 2. Install dependencies
@@ -112,7 +112,7 @@ To customize this portfolio for your own use:
 
 ## 🤝 Contributing
 
-Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/yourusername/techieearman/issues).
+Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/Arman-techiee/hello/issues).
 
 ## 📝 License
 
@@ -120,17 +120,15 @@ This project is [MIT](LICENSE) licensed.
 
 ## 👤 Author
 
-**TechieEarman**
+**Arman Khan**
 
 - Website: [https://techieearman.vercel.app](https://techieearman.vercel.app)
-- GitHub: [@yourusername](https://github.com/yourusername)
-- LinkedIn: [Your LinkedIn](https://linkedin.com/in/yourprofile)
+- GitHub: [@Arman-techiee](https://github.com/Arman-techiee)
+- Instagram: [ArMaN](https://www.instagram.com/techiee.arman)
 
 ## 🙏 Acknowledgments
 
 - Thanks to the React and Vite communities
-- Icons from [your icon source]
-- Fonts from [your font source]
 
 ---
 
