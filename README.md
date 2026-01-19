@@ -1,135 +1,280 @@
-# Arman Khan Portfolio
+# Portfolio Website - Arman Khan
 
-A modern, responsive portfolio website built with React and Vite, showcasing projects, skills, and professional experience.
+A modern, feature-rich portfolio website built with React, showcasing academic projects, professional skills, and personal achievements. This project demonstrates expertise in full-stack development, API integration, and modern web technologies.
 
-## 🚀 Live Demo
+## 🌟 Features
 
-[https://techieearman.vercel.app](https://techieearman.vercel.app)
+### Core Pages
+- **Home**: Dynamic hero section with skill highlights and featured projects
+- **About**: Comprehensive academic background and professional competencies
+- **Projects**: Interactive showcase of web applications
+- **Blog**: Article listing with search, filtering, and pagination
+- **Contact**: Professional contact form with social media integration
 
-## 🛠️ Built With
+### Interactive Applications
+1. **Weather Intelligence Platform**
+   - Real-time weather data from WeatherAPI.com
+   - Comprehensive metrics (temperature, humidity, wind, pressure, UV index)
+   - Search history and location-based forecasts
+   - Air quality monitoring
 
-- **React** - A JavaScript library for building user interfaces
-- **Vite** - Next generation frontend tooling
-- **Vercel** - Deployment and hosting platform
+2. **Movie Rating App**
+   - TMDB API integration for movie data
+   - Personal rating system
+   - Watchlist and favorites management
+   - Advanced search and filtering
 
-## ✨ Features
+3. **News Feed Application**
+   - NewsAPI.org integration
+   - Nepal-focused news aggregation
+   - Responsive card layout
+   - Real-time updates
 
-- ⚡ Lightning-fast performance with Vite
-- 📱 Fully responsive design
-- 🎨 Modern UI/UX
-- 🚀 Optimized for production
-- 🔄 Hot Module Replacement (HMR) for development
+4. **Professional Typing Test**
+   - Real-time WPM and accuracy tracking
+   - Multiple test durations (30s to 5 minutes)
+   - Performance analytics and history
+   - Professional-grade content
+
+### Additional Features
+- **Dark Mode**: System-wide theme switching
+- **Authentication**: Clerk integration for user management
+- **Protected Routes**: Secure access to project pages
+- **Responsive Design**: Mobile-first approach with Tailwind CSS
+- **Modern UI Components**: Built with shadcn/ui and Radix UI
+
+## 🚀 Tech Stack
+
+### Frontend
+- **React 18.3.1** - UI library
+- **React Router DOM 7.1.3** - Client-side routing
+- **Tailwind CSS 4.0.0** - Utility-first styling
+- **Vite 6.0.5** - Build tool and dev server
+
+### UI Components
+- **shadcn/ui** - Accessible component library
+- **Radix UI** - Unstyled, accessible primitives
+- **Lucide React** - Icon library
+
+### Authentication
+- **Clerk React 5.23.2** - User authentication and management
+
+### API Integrations
+- **Axios 1.7.9** - HTTP client
+- **WeatherAPI.com** - Weather data
+- **TMDB API** - Movie information
+- **NewsAPI.org** - News articles
+
+### Utilities
+- **clsx** & **tailwind-merge** - Class name management
+- **class-variance-authority** - Variant utilities
 
 ## 📋 Prerequisites
 
-Before you begin, ensure you have the following installed:
-- Node.js (v14 or higher)
-- npm or yarn
+Before running this project, ensure you have:
 
-## 🔧 Installation
+- **Node.js** (v18 or higher)
+- **npm** or **yarn** or **pnpm**
+- API keys for:
+  - [WeatherAPI.com](https://www.weatherapi.com/)
+  - [TMDB](https://www.themoviedb.org/settings/api)
+  - [NewsAPI.org](https://newsapi.org/)
+  - [Clerk](https://clerk.com/)
 
-1. Clone the repository
-```bash
-git clone https://github.com/Arman-techiee/hello.git
-cd hello
+## 🛠️ Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/Arman-techiee/portfolio.git
+   cd portfolio
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   # or
+   yarn install
+   # or
+   pnpm install
+   ```
+
+3. **Set up environment variables**
+   
+   Create a `.env` file in the root directory:
+   ```env
+   # Clerk Authentication
+   VITE_CLERK_PUBLISHABLE_KEY=your_clerk_publishable_key
+
+   # API Keys
+   VITE_WEATHER_API_KEY=your_weatherapi_key
+   VITE_MOVIE_API_KEY=your_tmdb_api_key
+   VITE_NEWS_API_KEY=your_newsapi_key
+   ```
+
+4. **Start the development server**
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   # or
+   pnpm dev
+   ```
+
+5. **Open your browser**
+   
+   Navigate to `http://localhost:5173`
+
+## 📁 Project Structure
+
+```
+portfolio/
+├── public/                  # Static assets
+├── src/
+│   ├── assets/             # Images and media files
+│   │   └── photo/
+│   ├── Components/         # React components
+│   │   ├── ui/            # Reusable UI components
+│   │   ├── Footer.jsx
+│   │   ├── NavBar.jsx
+│   │   ├── Weather.jsx
+│   │   ├── MovieRatingApp.jsx
+│   │   ├── NewsApp.jsx
+│   │   ├── TypingTest.jsx
+│   │   ├── Project.jsx
+│   │   ├── ProtectedRoute.jsx
+│   │   └── PleaseSignIn.jsx
+│   ├── Context/           # React context providers
+│   │   └── ThemeContext.jsx
+│   ├── hooks/             # Custom React hooks
+│   │   └── useTheme.js
+│   ├── lib/               # Utility functions
+│   │   └── utils.js
+│   ├── pages/             # Page components
+│   │   ├── Home.jsx
+│   │   ├── About.jsx
+│   │   ├── Projects.jsx
+│   │   ├── Blog.jsx
+│   │   ├── Contact.jsx
+│   │   ├── UserList.jsx
+│   │   └── UserDetail.jsx
+│   ├── routes/            # Routing configuration
+│   │   └── AppRouter.jsx
+│   ├── App.jsx            # Main app component
+│   ├── main.jsx           # Entry point
+│   └── index.css          # Global styles
+├── .env                   # Environment variables
+├── .gitignore
+├── package.json
+├── vite.config.js
+├── tailwind.config.js
+└── README.md
 ```
 
-2. Install dependencies
-```bash
-npm install
-# or
-yarn install
-```
+## 🎨 Features in Detail
 
-3. Start the development server
-```bash
-npm run dev
-# or
-yarn dev
-```
+### Theme System
+- Custom theme context with localStorage persistence
+- Automatic dark mode detection
+- Smooth transitions between themes
 
-4. Open your browser and visit `http://localhost:5173`
+### Authentication Flow
+- Clerk-powered user authentication
+- Protected routes for sensitive pages
+- Sign-in modal integration
+- User profile management
 
-## 📦 Build
+### API Integration
+- Centralized error handling
+- Loading states for all API calls
+- Rate limiting awareness
+- Graceful fallbacks for missing data
 
-To create a production build:
+### Responsive Design
+- Mobile-first approach
+- Breakpoint-based layouts
+- Touch-friendly interfaces
+- Optimized images
+
+## 🚀 Build for Production
 
 ```bash
 npm run build
 # or
 yarn build
-```
-
-To preview the production build locally:
-
-```bash
-npm run preview
 # or
-yarn preview
+pnpm build
 ```
 
-## 🚀 Deployment
+The build output will be in the `dist` directory.
 
-This project is deployed on Vercel. To deploy your own version:
+## 🧪 Development Guidelines
 
-1. Fork this repository
-2. Sign up for [Vercel](https://vercel.com)
-3. Import your forked repository
-4. Vercel will automatically detect Vite and configure the build settings
-5. Deploy!
+### Code Style
+- Use functional components with hooks
+- Follow ESLint configuration
+- Maintain consistent naming conventions
+- Write self-documenting code
 
-Alternatively, you can deploy using the Vercel CLI:
+### Component Structure
+- Keep components small and focused
+- Use composition over inheritance
+- Implement proper prop validation
+- Handle edge cases gracefully
 
-```bash
-npm install -g vercel
-vercel
-```
+### Performance
+- Lazy load routes and components
+- Optimize images and assets
+- Minimize bundle size
+- Use React.memo when appropriate
 
-## 📁 Project Structure
+## 🔒 Environment Variables
 
-```
-techieearman/
-├── public/          # Static assets
-├── src/             # Source files
-│   ├── assets/      # Images, fonts, etc.
-│   ├── components/  # React components
-│   ├── App.jsx      # Main App component
-│   └── main.jsx     # Entry point
-├── index.html       # HTML template
-├── package.json     # Project dependencies
-├── vite.config.js   # Vite configuration
-└── README.md        # Project documentation
-```
-
-## 🎨 Customization
-
-To customize this portfolio for your own use:
-
-1. Update personal information in the components
-2. Replace images in the `src/assets` directory
-3. Modify styling to match your brand
-4. Add or remove sections as needed
+| Variable | Description | Required |
+|----------|-------------|----------|
+| `VITE_CLERK_PUBLISHABLE_KEY` | Clerk authentication key | Yes |
+| `VITE_WEATHER_API_KEY` | WeatherAPI.com API key | Yes |
+| `VITE_MOVIE_API_KEY` | TMDB API key | Yes |
+| `VITE_NEWS_API_KEY` | NewsAPI.org API key | Yes |
 
 ## 🤝 Contributing
 
-Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/Arman-techiee/hello/issues).
+Contributions are welcome! Please follow these steps:
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
 ## 📝 License
 
-This project is [MIT](LICENSE) licensed.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 👤 Author
 
 **Arman Khan**
 
-- Website: [https://techieearman.vercel.app](https://techieearman.vercel.app)
 - GitHub: [@Arman-techiee](https://github.com/Arman-techiee)
-- Instagram: [ArMaN](https://www.instagram.com/techiee.arman)
+- Email: arman.techiee@gmail.com
+- Facebook: [techiee.arman](https://www.facebook.com/techiee.arman)
+- Instagram: [@techiee.arman](https://www.instagram.com/techiee.arman)
 
 ## 🙏 Acknowledgments
 
-- Thanks to the React and Vite communities
+- [React Documentation](https://react.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [shadcn/ui](https://ui.shadcn.com/)
+- [Clerk](https://clerk.com/)
+- [WeatherAPI.com](https://www.weatherapi.com/)
+- [TMDB](https://www.themoviedb.org/)
+- [NewsAPI.org](https://newsapi.org/)
+
+## 📊 Project Status
+
+This project is actively maintained and under continuous development. New features and improvements are regularly added.
 
 ---
 
-⭐ If you found this project helpful, please consider giving it a star!
+**Note**: This is a portfolio project showcasing web development skills. API keys should be kept secure and never committed to version control.
+
+For questions or support, please open an issue or contact me directly.
